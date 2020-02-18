@@ -24,4 +24,6 @@ public class MainActivity extends AppCompatActivity {
         Toast myToast = Toast.makeText(getApplicationContext(), "Your device is now locked!", Toast.LENGTH_LONG);
         myToast.show();
     }
+
+
 }
