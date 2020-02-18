@@ -8,7 +8,7 @@ import java.util.Random;
 public class Lock {
     private int lockID;     // Pre-assigned to each printed device.
     private int accessCode;   // Assigned on registration.
-    private Boolean lockState;  // Keeps track of
+    private Boolean lockState;  // Keeps track of whether lock is currently locked/unlocked.
 
     public Lock(int lockID) {
         Random lockCodeGenerator = new Random();
