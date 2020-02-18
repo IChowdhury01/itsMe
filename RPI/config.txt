@@ -1,3 +1,7 @@
+Raspberry Pi login
+Username: pi
+Password: dobby
+
 MySQL Server login
 Username: root
 Password: dobby
