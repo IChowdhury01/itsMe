@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Attachable Smart Lock</string>
+    <string name="lock_button">LOCK/UNLOCK</string>
 </resources>
