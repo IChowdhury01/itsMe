@@ -3,7 +3,7 @@ package sp2020.attachablesmartlock.Locks;
 import java.util.Random;
 
 
-// TODO: Might need to add lockID/code to User
+// TODO: Might need to add lockID/code to User. Add Lock field to User.java.
 
 public class Lock {
     private int lockID;     // Pre-assigned to each printed device.
@@ -15,6 +15,7 @@ public class Lock {
 
         this.lockID = lockID;
         this.accessCode = lockCodeGenerator.nextInt(999999);  // TODO: When lock is created, check if generated code is already in database.
+        this.lockState = false; // When creating a new lock, default state is unlocked.
     }
 
     public int getLockID() {
@@ -31,6 +32,14 @@ public class Lock {
 
     public void setAccessCode(int accessCode) {
         this.accessCode = accessCode;
+    }
+
+    public Boolean getLockState() {
+        return lockState;
+    }
+
+    public void setLockState(Boolean lockState) {
+        this.lockState = lockState;
     }
 
     @Override
