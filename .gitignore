@@ -5,6 +5,7 @@
 
 # files for the dex VM
 *.dex
+debug.log
 
 # Java class files
 *.class
