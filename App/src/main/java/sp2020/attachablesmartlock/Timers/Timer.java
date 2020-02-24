@@ -16,17 +16,6 @@ public class Timer {
         minutes.setValue(minutesAtBeginning);
         seconds.setValue(secondsAtBeginning);
     }
-    
-    public void tickUp() {
-        // Timer advances by one second
-        this.seconds.increase();
-        if(this.seconds.getValue() == 0) {
-            this.minutes.increase();
-            if(this.minutes.getValue()==0) {
-                this.hours.increase();
-            }
-        }
-    }
 
     public void tickDown() {
         // Timer goes down by one second
@@ -43,8 +32,12 @@ public class Timer {
         return this.seconds.getValue() + this.minutes.getValue()*60 + this.hours.getValue()*60*60;
     }
 
+    public void setTime (int newHours, int newMinutes, int newSeconds) {
+        this.hours.setValue(newHours);
+        this.minutes.setValue(newMinutes);
+        this.seconds.setValue(newSeconds);
+    }
 
-    
     public String toString() {
         // returns the string representation
         return this.hours + ":" + this.minutes + ":" + this.seconds;
