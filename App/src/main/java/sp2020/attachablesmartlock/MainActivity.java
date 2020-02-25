@@ -27,11 +27,31 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Function that is called whenever the LOCK/UNLOCK button is clicked.
+     * Function that is called whenever the home screen LOCK button is clicked.
      * Creates a Toast object (on-screen notification) and shows it on the screen.
      */
     public void onLockButtonTap(View v) {
         Toast myToast = Toast.makeText(getApplicationContext(), "Your device is now locked!", Toast.LENGTH_LONG);
+        myToast.show();
+    }
+
+
+
+    /**
+     * Function that is called whenever the home screen "Friends" button is clicked.
+     * It will redirect the user to his friends list page.
+     */
+    public void onFriendButtonTap(View v) {
+        Toast myToast = Toast.makeText(getApplicationContext(), "Friend's list not implemented yet.", Toast.LENGTH_LONG);
+        myToast.show();
+    }
+
+    /**
+     * Function that is called whenever the user clicks his profile picture on the home screen.
+     * It will redirect the user to his User profile page.
+     */
+    public void onProfilePicTap(View v) {
+        Toast myToast = Toast.makeText(getApplicationContext(), "User profile not implemented yet.", Toast.LENGTH_LONG);
         myToast.show();
     }
 
