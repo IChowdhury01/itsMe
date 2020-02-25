@@ -1,0 +1,18 @@
+CREATE TABLE user (
+	uid INTEGER PRIMARY KEY NOT NULL,
+	uname char(10) DEFAULT NULL,
+	userslock INTEGER DEFAULT NULL,
+	lockstate BOOLEAN DEFAULT NULL
+);
+
+CREATE TABLE friend (
+	fid INTEGER PRIMARY KEY NOT NULL,
+	fname char(10) DEFAULT NULL,
+	hasaccess BOOLEAN DEFAULT NULL,
+	accesstimer INTEGER DEFAULT NULL,
+	tempauthcode INTEGER DEFAULT NULL,
+	uid INTEGER NOT NULL,
+ 	FOREIGN KEY (uid)
+              REFERENCES position (uid)
+	
+);
