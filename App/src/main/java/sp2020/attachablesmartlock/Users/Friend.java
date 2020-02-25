@@ -2,19 +2,29 @@ package sp2020.attachablesmartlock.Users;
 
 import sp2020.attachablesmartlock.Timers.Timer;
 
+/**
+ * This class is for creating an object that represent's a user's friend.
+ * The object tracks the user's ID, name and PFP (taken from the friend's User account object),
+ * whether they have access to the user's lock, and how long they have access for.
+ */
 public class Friend {
 
-    // Fields that will be displayed in UI
+    // These fields will be displayed in the UI
     private String name;
     private Boolean hasAccess;
     private String profilePicURL;
-
-    private int tempAuthCode;     // Used for authentication unlocking device.
     private Timer accessTimer;    // Tracks remaining access time of friend.
 
-    public Friend(String name, String profilePicURL) {
-        this.name = name;       // These will be retrieved from the database.
-        this.profilePicURL = profilePicURL;
+    // Not shown in UI.
+    private int UID;       // Matches user ID of added friend.
+    private int tempAuthCode;     // Used for authentication before unlocking device.
+
+
+    // Turns a user into a friend
+    public Friend(User userToFriend) {
+        this.UID = userToFriend.getUserID();
+        this.name = userToFriend.getName();
+        this.profilePicURL = userToFriend.getProfilePicURL();
 
         this.hasAccess = false; // By default, added friends don't have lock access.
         this.tempAuthCode = 0;
@@ -29,14 +39,9 @@ public class Friend {
      * When friend tries to unlock a device: check if friend's tempAuthcode == user's lockID
      */
 
-
+    // Getters/Setters
     public Boolean getHasAccess() {
         return hasAccess;
-    }
-
-    public void setHasAccess(Boolean hasAccess) {
-
-        this.hasAccess = hasAccess;
     }
 
     public int getTempAuthCode() {
@@ -49,10 +54,6 @@ public class Friend {
 
     public Timer getAccessTimer() {
         return accessTimer;
-    }
-
-    public void setAccessTimer(Timer accessTimer) {
-        this.accessTimer = accessTimer;
     }
 
     public String getName() {
@@ -71,12 +72,40 @@ public class Friend {
         this.profilePicURL = profilePicURL;
     }
 
+    public int getUID() {
+        return UID;
+    }
+
     @Override
     public String toString() {
-        return "Friend Info\n" +
-                "\nName: " + name+
-                "\nAccess Priveleges: " + hasAccess +
-                "\nTime Remaining: " + accessTimer +
-                "\nAuthorization Code: " + tempAuthCode;
+        if (hasAccess) {
+            return name + ", " + hasAccessToString() + ", Remaining time: " +  accessTimer + "\n";
+        }
+        else {
+            return name + ", " + hasAccessToString() + "\n";
+        }
     }
+
+
+    public String hasAccessToString() {
+        if (hasAccess) {
+            return "Currently has lock access";
+        }
+        else {
+            return "Currently does not have lock access";
+        }
+    }
+
+    public void grantAccess(int hours, int minutes, int seconds) {
+        this.hasAccess = true;
+
+        this.accessTimer.setTime(hours,minutes,seconds);
+    }
+
+    public void revokeAccess() {
+        this.hasAccess = false;
+        this.accessTimer.clear();
+    }
+
 }
+

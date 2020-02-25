@@ -1,17 +1,24 @@
 package sp2020.attachablesmartlock.Timers;
 
+/**
+ * This a class for creating counter objects.
+ * The counter starts with value 0.
+ * The counter's bound is the max value it can have.
+ * When it goes over the bound, it resets to 0.
+ */
+
 public class BoundedCounter {
     private int value;
-    private int upperBound;
+    private int bound;
 
-    public BoundedCounter(int startBound) {
+    public BoundedCounter(int Bound) {
         value = 0;
-        upperBound = startBound;
+        bound = Bound;
     }
 
     public void increase() {
         this.value++;
-        if (this.value > upperBound) {
+        if (this.value > bound) {
             this.value=0;
         }
     }
@@ -19,7 +26,7 @@ public class BoundedCounter {
     public void decrease() {
         this.value--;
         if (this.value < 0) {
-            this.value=upperBound;
+            this.value = bound;
         }
     }
 
@@ -38,12 +45,9 @@ public class BoundedCounter {
     }
 
     public void setValue(int newValue) {
-        if (newValue <= upperBound) {
-            if (newValue < 0) {
-                newValue = 0;
-            }
-
-            this.value = newValue;
+        if (newValue < 0 || newValue > bound) {
+            newValue = 0;
         }
+        this.value = newValue;
     }
 }

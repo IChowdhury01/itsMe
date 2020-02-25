@@ -1,5 +1,10 @@
 package sp2020.attachablesmartlock.Timers;
 
+/**
+ * This class is for creating timer objects.
+ * Timers track how long a user's friend has access to their lock.
+ * A timer consists of 3 counters, for hours minutes and seconds.
+ */
 public class Timer {
     private BoundedCounter hours;
     private BoundedCounter minutes;
@@ -36,6 +41,10 @@ public class Timer {
         this.hours.setValue(newHours);
         this.minutes.setValue(newMinutes);
         this.seconds.setValue(newSeconds);
+    }
+
+    public void clear() {
+        this.setTime(0,0,0);
     }
 
     public String toString() {

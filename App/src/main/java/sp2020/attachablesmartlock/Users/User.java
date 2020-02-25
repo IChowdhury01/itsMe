@@ -1,10 +1,15 @@
 package sp2020.attachablesmartlock.Users;
 
+import androidx.annotation.Nullable;
+
 import java.util.ArrayList;
 import java.util.Random;
 
 import sp2020.attachablesmartlock.Locks.Lock;
 
+/**
+ * This class models ever user account.
+ */
 public class User {
 
     private Random idCreator = new Random();
@@ -13,7 +18,8 @@ public class User {
     private String name;        // Full name
     private String profilePicURL;   // Path to uploaded profile picture
     private Lock usersLock;     // Every user has their own lock.
-    private ArrayList<Friend> friendsList;   // List of friends
+
+    private FriendsList usersFriendsList;    // User's friends list
 
 
     /**
@@ -26,34 +32,38 @@ public class User {
     /**
      * Constructors
      * User can be created with:
-     * Name, Lock ID
+     * Name, Lock ID (if no pfp uploaded during registration)
      * Name, Lock ID, filename of uploaded profile pic
      */
 
     // Note: one lock can be registered to multiple users.
     public User(String inputName, int inputLockID) {
-        this.userID = idCreator.nextInt(99999999);
+        this.userID = idCreator.nextInt(99999998) + 1;  // Can't be 0;
 
         this.name = inputName;
 
-        this.profilePicURL = System.getProperty("user.dir") + "\\RPI\\uploadedPhotos\\default.jpg";
+        this.profilePicURL = System.getProperty("user.dir") + "RPI/uploadedPhotos/default.jpg";
 
         this.usersLock = new Lock(inputLockID); // Creates lock object for user.
 
-        this.friendsList = new ArrayList<Friend>();
+        this.usersFriendsList = new FriendsList();
     }
 
     public User(String inputName, int inputLockID, String uploadedFileName) {
-        this.userID = idCreator.nextInt(99999999);
+        this.userID = idCreator.nextInt(99999998) + 1;
 
         this.name = inputName;
 
-        this.profilePicURL = System.getProperty("user.dir") + "\\RPI\\uploadedPhotos\\" + uploadedFileName;
+        this.profilePicURL = System.getProperty("user.dir") + "RPI/uploadedPhotos/" + uploadedFileName;
 
         this.usersLock = new Lock(inputLockID); // Creates lock object for user.
 
-        this.friendsList = new ArrayList<Friend>();
+        this.usersFriendsList = new FriendsList();
     }
+
+
+    // Standard getters/setters
+
 
     public int getUserID() {
         return userID;
@@ -71,8 +81,8 @@ public class User {
         return usersLock;
     }
 
-    public ArrayList<Friend> getFriendsList() {
-        return friendsList;
+    public FriendsList getUsersFriendsList() {
+        return usersFriendsList;
     }
 
     public void setName(String name) {
@@ -87,28 +97,19 @@ public class User {
         this.usersLock = usersLock;
     }
 
-    public void addFriend (User userToAdd) {
-        Friend newFriend = new Friend(userToAdd.name, profilePicURL);
 
-        this.friendsList.add(newFriend);
-    }
 
-    public void removeFriend (Friend newFriend) {
-        this.friendsList.remove(newFriend);
-    }
 
-    public void clearFriends() {
-        this.friendsList.clear();
-    }
-
+    // Print user contents
 
     @Override
     public String toString() {
-        return "User Info\nName: " + name
+        return "\nName: " + name
                 + "\nUser ID: " + userID
                 + "\nPath to Profile Photo: " + profilePicURL
-                + "\nUser's Lock Information\nLock ID: " + usersLock.getLockID()
-                + "\nLock State: " + usersLock.getLockState()
-                + "\nFriends List" + friendsList;
+                + "\nLock ID: " + usersLock.getLockID()
+                + "\nLock State: " + usersLock.isLocked();
     }
+
+
 }

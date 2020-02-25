@@ -22,37 +22,141 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-        // TESTING
-        Log.d("TAG1", "This will print when the app is run.");
-
-        // To make random numbers.
-        Random randomizer = new Random();
-
-        // Create objects from each class.
-        User myFirstUser = new User ("Ivan Chowdhury", 12345678);
-        User mySecondUser = new User ("Sam Keene", 1111111);
-        Friend sampleFriend = new Friend("Friend 1", "");
-        Lock sampleLock = new Lock(0000011);
-        BoundedCounter sampleCounter = new BoundedCounter(30);
-        Timer sampleTimer = new Timer(3,25,30);
-
-        // Test objects
-
-
-
+        runTests();
     }
 
-    /**
-     *  Function that is called whenever the LOCK/UNLOCK button is clicked.
-     *  Creates a Toast object (on-screen notification) and shows it on the screen.
-      */
 
+    /**
+     * Function that is called whenever the LOCK/UNLOCK button is clicked.
+     * Creates a Toast object (on-screen notification) and shows it on the screen.
+     */
     public void onLockButtonTap(View v) {
         Toast myToast = Toast.makeText(getApplicationContext(), "Your device is now locked!", Toast.LENGTH_LONG);
         myToast.show();
     }
 
 
+    /**
+     * This function runs all code-testing methods.
+     */
+    public static void runTests() {
+        Log.d("myTest", "This will print if the app is successfully run.");
+
+        Random randomizer = new Random();   // If RNG is used for some tests
+
+        // Comment out tests after they're working.
+//        testLock(randomizer);
+//        testCounter();
+//        testTimer();
+//        testFriend();
+//        testUsers();
+    }
+
+
+    // Testing methods
+    
+    public static void testLock(Random randomizer) {
+        // Test lock class.
+        Lock myLock = new Lock(randomizer.nextInt(9999999));
+        Log.d("myTestClass L", myLock.toString());
+
+        Log.d("myTestClass L", "Lock ID is " + myLock.getLockID() + " and lock state is " + myLock.isLocked());
+
+        Log.d("myTestClass L", myLock.lockStateToString());
+
+        myLock.switchLockState();
+
+        Log.d("myTestClass L", myLock.toString());
+    }
+
+    public static void testCounter() {
+        BoundedCounter myCounter = new BoundedCounter(59);
+
+        Log.d("myTestClass C", myCounter.toString());
+        Log.d("myTestClass C", "Counter's current value is " + myCounter.getValue());
+
+        myCounter.setValue(24);
+        Log.d("myTestClass C", myCounter.toString());
+        myCounter.setValue(60);
+        Log.d("myTestClass C", myCounter.toString());
+        myCounter.setValue(-2);
+        Log.d("myTestClass C", myCounter.toString());
+
+        myCounter.setValue(1);
+        Log.d("myTestClass C", myCounter.toString());
+        myCounter.decrease();
+        Log.d("myTestClass C", myCounter.toString());
+        myCounter.decrease();
+        Log.d("myTestClass C", myCounter.toString());
+
+        myCounter.setValue(58);
+        Log.d("myTestClass C", myCounter.toString());
+        myCounter.increase();
+        Log.d("myTestClass C", myCounter.toString());
+        myCounter.increase();
+        Log.d("myTestClass C", myCounter.toString());
+    }
+
+    public static void testTimer() {
+        Timer myTimer = new Timer(0, 0, 0);
+        Log.d("myTestClass Timer", myTimer.toString());
+
+        myTimer.setTime(23, 59, 59);
+        Log.d("myTestClass Timer", myTimer.toString());
+        Log.d("myTestClass Timer", "Seconds: " + myTimer.getTimeInSeconds());
+
+        myTimer.tickDown();
+        Log.d("myTestClass Timer", myTimer.toString());
+
+        myTimer.setTime(23, 59, 0);
+        myTimer.tickDown();
+        Log.d("myTestClass Timer", myTimer.toString());
+
+        myTimer.setTime(23, 0, 0);
+        myTimer.tickDown();
+        Log.d("myTestClass Timer", myTimer.toString());
+
+        myTimer.setTime(0, 0, 0);
+        myTimer.tickDown();
+        Log.d("myTestClass Timer", myTimer.toString());
+    }
+
+    public static void testFriend() {
+        User user1 = new User("User1", 00001);
+        User user2 = new User("User2", 00002);
+
+        Friend addedUser = new Friend(user1);   // Creates a friend object representing user2.
+        Friend addedUserv2 = new Friend(user2);  // method 2
+
+        addedUserv2.grantAccess(1, 23, 5);
+        Log.d("myTestClass Friend", addedUser.toString());
+        Log.d("myTestClass Friend", addedUserv2.toString());
+
+        addedUserv2.revokeAccess();
+        Log.d("myTestClass Friend", addedUserv2.toString());
+    }
+
+    public static void testUsers() {
+        // Create users
+        User user1 = new User("User1", 00001);
+        User user2 = new User("User2", 00002, "myPic.jpg");
+        User user3 = new User("User3", 00003);
+
+        Log.d("myTestClass User", user1.toString());
+        Log.d("myTestClass User", user2.toString());
+
+        // Add friends
+        Log.d("myTestClass User", user1.getUsersFriendsList().toString());
+        user1.getUsersFriendsList().addFriend(user2);
+        user1.getUsersFriendsList().addFriend(user3);
+        Log.d("myTestClass User", user1.getUsersFriendsList().toString());
+
+        // Remove friends
+        user1.getUsersFriendsList().removeFriend(user3);
+        Log.d("myTestClass User", user1.getUsersFriendsList().toString());
+
+        // Clear list
+        user1.getUsersFriendsList().clearFriends();
+        Log.d("myTestClass User", user1.getUsersFriendsList().toString());
+    }
 }

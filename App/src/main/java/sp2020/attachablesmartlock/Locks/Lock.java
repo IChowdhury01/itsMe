@@ -1,38 +1,55 @@
 package sp2020.attachablesmartlock.Locks;
 
-import java.util.Random;
 
+/**
+ * This is a class for creating Lock objects.
+ * Every lock has a lock ID that will be input on user registration.
+ * The lock has 2 states: locked (isLocked = true) or unlocked (false).
+ */
 
 public class Lock {
-    private int lockID;         // Pre-assigned to each printed device.
-    private Boolean lockState;  // Keeps track of whether lock is currently locked/unlocked.
+    private int lockID;         // Pre-assigned to each device. Related to device's connection to network.
+    private Boolean isLocked;  // Keeps track of whether lock is currently locked/unlocked.
 
     public Lock(int lockID) {
         this.lockID = lockID;
-        this.lockState = false; // When creating a new lock, default state is unlocked.
+        this.isLocked = false; // When creating a new lock, default state is unlocked.
     }
 
     public int getLockID() {
         return lockID;
     }
 
-    public void setLockID(int lockID) {
-        this.lockID = lockID;
+    public Boolean isLocked() {
+        return this.isLocked;   // False = unlocked. True = locked.
     }
 
-    public Boolean getLockState() {
-        return lockState;
-    }
-
-    public void setLockState(Boolean lockState) {
-        this.lockState = lockState;
+    // Switches state of lock (locked <-> unlocked). Use when home screen lock button is clicked.
+    public void switchLockState() {
+        this.isLocked = !this.isLocked;
     }
 
     @Override
     public String toString() {
-        return "Lock{" +
-                "lockID=" + lockID +
-                ", lockState=" + lockState +
-                '}';
+        String lockedOrUnlocked;
+
+        if (isLocked) {
+            lockedOrUnlocked = "Locked";
+        }
+        else {
+            lockedOrUnlocked = "Unlocked";
+        }
+
+        return "Lock #" + lockID
+                + ", " + lockedOrUnlocked;
+    }
+
+    public String lockStateToString() {
+        if (this.isLocked) {
+            return "locked";
+        }
+        else {
+            return "unlocked";
+        }
     }
 }
