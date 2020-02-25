@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     // Testing methods
-    
+
     public static void testLock(Random randomizer) {
         // Test lock class.
         Lock myLock = new Lock(randomizer.nextInt(9999999));
