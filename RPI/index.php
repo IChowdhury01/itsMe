@@ -1,3 +1,3 @@
 
-<?php echo "Smar_Lock Web Server Beta"; ?>
+<?php echo "ItsMe: Portable Smart Lock - Web Server Beta"; ?>
 

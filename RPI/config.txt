@@ -5,5 +5,3 @@ Password: dobby
 MySQL Server login
 Username: root
 Password: dobby
-
-Apache settings file (on Raspberry Pi): /var/www/html/index.php
