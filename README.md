@@ -1,4 +1,4 @@
-# Attachable-Smart-Lock
+# ItsMe: Attachable Smart Lock 
 
 ## Team
 
