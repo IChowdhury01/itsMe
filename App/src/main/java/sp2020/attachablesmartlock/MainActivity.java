@@ -2,6 +2,10 @@ package sp2020.attachablesmartlock;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.provider.ContactsContract;
+import android.widget.Button;
+
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,7 +20,6 @@ import sp2020.attachablesmartlock.Users.Friend;
 import sp2020.attachablesmartlock.Users.User;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         runTests();
     }
-
 
     /**
      * Function that is called whenever the home screen LOCK button is clicked.
@@ -46,13 +48,27 @@ public class MainActivity extends AppCompatActivity {
         myToast.show();
     }
 
+    public void onBluetoothTap(View v) {
+        Intent intent = new Intent(this, Bluetooth.class);
+        startActivity(intent);
+    }
+
+    public void onLogoTap(View v) {
+        Intent intent = new Intent(this, showinfo.class);
+        startActivity(intent);
+        //Toast myToast = Toast.makeText(getApplicationContext(), "Friend's list not implemented yet.", Toast.LENGTH_LONG);
+        //myToast.show();
+    }
+
     /**
      * Function that is called whenever the user clicks his profile picture on the home screen.
      * It will redirect the user to his User profile page.
      */
     public void onProfilePicTap(View v) {
-        Toast myToast = Toast.makeText(getApplicationContext(), "User profile not implemented yet.", Toast.LENGTH_LONG);
-        myToast.show();
+
+        Intent intent = new Intent(this, Userprofile.class);
+        startActivity(intent);
+
     }
 
 
