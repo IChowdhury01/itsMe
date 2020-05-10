@@ -20,7 +20,7 @@ This is an Android app that controls an attachable smart lock IoT device remotel
 - Remotely lock/unlock the device from the app.
 
 ## Materials
-![](https://i.imgur.com/XR6FRw1.jpg)
+![](https://i.imgur.com/hORWZto.jpg)
 
 ## Installation
 - Download the app via APK or from the Google Play store.
