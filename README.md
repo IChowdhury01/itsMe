@@ -19,6 +19,9 @@ This is an Android app that controls an attachable smart lock IoT device remotel
 - Monitor current status of attached lock in real-time from the smartphone app.
 - Remotely lock/unlock the device from the app.
 
+## Materials
+![](https://i.imgur.com/XR6FRw1.jpg)
+
 ## Installation
 - Download the app via APK or from the Google Play store.
 - Download the CAD model for the smart lock device.
