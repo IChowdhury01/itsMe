@@ -14,6 +14,7 @@ Ivan Chowdhury
 
 This is an Android app that controls an attachable smart lock IoT device remotely through a server hosted on a Raspberry Pi. The goal of this project is to create a more versatile form of lock that can be freely attached onto deadbolt doorlocks and then controlled remotely via a smartphone application.  The lock's design will be open-source and thus modifiable to the owner's preferences, 3D-printable from standard materials, and require low-cost installation without home renovation.
 
+Final Presentation may be found [here](https://www.youtube.com/watch?v=xuYFx85O6f8).
 ## Features
 - Adjust device to most sizes/shapes of deadbolt locks.
 - Monitor current status of attached lock in real-time from the smartphone app.
