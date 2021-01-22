@@ -15,7 +15,7 @@ itsMe is an IoT smart lock designed for improved portability and versatility, an
 
 [![CAD Model](/demos/Snapshots/Final/CAD.gif)](/demos/CAD)
 
-**Click the animation to download our 3D-printable CAD models.**
+**Click the animation to find our 3D-printable CAD models.**
 
 ### Demo
 [![Demo video](https://img.youtube.com/vi/Y3_GFy8Gmhg/maxresdefault.jpg)](https://www.youtube.com/watch?v=Y3_GFy8Gmhg)
