@@ -8,13 +8,14 @@ A new, revolutionary IoT smart lock.
 ![license-MIT](https://img.shields.io/badge/license-MIT-green)
 
 
-![CAD Model](/demos/Snapshots/Final/CAD.gif)
 
 ## Project Description
 
 itsMe is an IoT smart lock designed for improved portability and versatility, and low cost-of-installation. itsMe locks can be 3D-printed and assembled at under $60, freely attached onto deadbolt locks with no required home renovation, and controlled remotely via Bluetooth with the itsMe Android app. itsMe's design is fully open-source, and can be modified to fit locks of any size for individual use. 
 
-**The 3D-printable CAD models can be found [here](/demos/CAD).**
+[![CAD Model](/demos/Snapshots/Final/CAD.gif)](/demos/CAD)
+
+**Click the animation to download our 3D-printable CAD models.**
 
 ### Demo
 [![Demo video](https://img.youtube.com/vi/Y3_GFy8Gmhg/maxresdefault.jpg)](https://www.youtube.com/watch?v=Y3_GFy8Gmhg)
