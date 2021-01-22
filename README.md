@@ -13,35 +13,41 @@ A new, revolutionary IoT smart lock.
 
 itsMe is an IoT smart lock designed for improved portability and versatility, and low cost-of-installation. itsMe locks can be 3D-printed and assembled at under $60, freely attached onto deadbolt locks with no required home renovation, and controlled remotely via Bluetooth with the itsMe Android app. itsMe's design is fully open-source, and can be modified to fit locks of any size for individual use. 
 
-[![CAD Model](/demos/Snapshots/Final/CAD.gif)](/demos/CAD)
-
-**Click the animation to find our 3D-printable CAD models.**
 
 ### Demo
-[![Demo video](https://img.youtube.com/vi/Y3_GFy8Gmhg/maxresdefault.jpg)](https://www.youtube.com/watch?v=Y3_GFy8Gmhg)
+**[Operation demo](https://www.youtube.com/watch?v=Y3_GFy8Gmhg)**
 
-**[Rotation Demo](https://www.youtube.com/watch?v=DRbHsR_Iyws)**
+**[Rotation demo](https://www.youtube.com/watch?v=DRbHsR_Iyws)**
 
 **[Final Presentation](https://www.youtube.com/watch?v=xuYFx85O6f8)**
 
-### Features
-- Adjust device to most sizes/shapes of deadbolt locks.
-- Monitor current status of attached lock in real-time from the smartphone app.
-- Remotely lock/unlock the device from the app.
+### 3D-Printable Models
+
+[![CAD Model](/demos/Snapshots/Final/CAD.gif)](/demos/CAD)
+
+Click the animation above to find the models.
 
 ### Materials
 ![](https://i.imgur.com/hORWZto.jpg)
 
-## Getting Started
-### Installation
-- Download the app via APK or from the Google Play store.
-- Download the CAD model for the smart lock device.
-- Purchase a Raspberry Pi model. For minimizing cost, the Raspberry Pi ZeroW is supported.
-- Purchase a Servo motor. The Adafruit feedback 360-degree rotational servo is recommended. 
-- 3D print your smart lock and put it together. Place the Servo Motor in the groove and wire it to your Raspberry Pi.
-- Your lock's state is now being monitored through the app. Press "Lock" or "Unlock" on the app to control the lock's state.
+The above materials are all purchasable on Amazon. These are the recommended brands minimizing cost-of-installation; other brands may work, but device stability will not be guaranteed. 
 
-### Instructions
-1. Attach your device onto your door, with its grip attached onto your deadbolt lock.
-2. Open the app, press "Turn Bluetooth On" and connect to your lock. 
-3. Download the itsMe SmartLock Android app (via APK or Google Play Store) and install it.
+## Getting Started
+
+### Prerequisites
+- Android phone
+- [Android Studio 4.0+](https://developer.android.com/studio) installed.
+
+### Installation
+1. Purchase the materials listed above.
+2. Clone this repository
+3. [Optional] Modify the dimensions of the downloaded CAD models to suit your needs.
+4. 3D print your materials with ABS plastic.
+5. Assemble your 3D-printed parts, following the animation above. Place the Servo Motor in the groove and wire it to your Raspberry Pi. Place the self-adhesive tape strips around the edge of your device (where it'll make contact with the door).
+6. Open this project in Android studio. Then connect your Android device to your computer with a USB cable, and run the app. Your phone will now have the itsMe app installed.
+
+### Usage
+1. Install your smart lock onto your door by simply placing the grip over a pre-existing deadbolt lock. Make sure itthe device is firmly attached to the door with the adhesive strips.
+2. Open the itsMe Android app.
+3. Turn on Bluetooth on your phone and connect it to your smart lock.
+4. Your lock's state is now being monitored through the app. Press the "Lock" or "Unlock" app buttons to control the lock's state. Enjoy!
