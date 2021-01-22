@@ -1,6 +1,6 @@
 ![Logo](/demos/Snapshots/Final/logo2.png)
 
-**A new, revolutionary IoT smart lock.**
+**A new, revolutionary smart lock.**
 
 ![release-v1.0](https://img.shields.io/badge/release-v1.0-blue)
 ![build-passing](https://img.shields.io/badge/build-passing-brightgreen)
@@ -11,7 +11,7 @@
 
 ## Project Description
 
-itsMe is an IoT smart lock designed for improved portability and versatility, and low cost-of-installation. itsMe locks can be 3D-printed and assembled at under $60, freely attached onto deadbolt locks with no required home renovation, and controlled remotely via Bluetooth with the itsMe Android app. itsMe's design is fully open-source, and can be modified to fit locks of any size for individual use. See our **[final presentation](https://www.youtube.com/watch?v=xuYFx85O6f8)** and **[complete documentation](/docs/full-documentation)** for further information.
+itsMe is a smart lock IoT device designed for improved portability and versatility, and low cost-of-installation. itsMe locks can be 3D-printed and assembled at under $60, freely attached onto deadbolt locks with no required home renovation, and controlled remotely via Bluetooth with the itsMe Android app. itsMe's design is fully open-source, and can be modified to fit locks of any size for individual use. See our **[final presentation](https://www.youtube.com/watch?v=xuYFx85O6f8)** and **[complete documentation](/docs/full-documentation)** for further information.
 
 
 ### Demo
