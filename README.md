@@ -1,6 +1,6 @@
 ![Logo](/demos/Snapshots/Final/logo2.png)
 
-A new, revolutionary IoT smart lock.
+**A new, revolutionary IoT smart lock.**
 
 ![release-v1.0](https://img.shields.io/badge/release-v1.0-blue)
 ![build-passing](https://img.shields.io/badge/build-passing-brightgreen)
