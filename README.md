@@ -1,20 +1,25 @@
-# ItsMe: Attachable Smart Lock 
+# itsMe: Attachable Smart Lock 
 
-## Team
+![Logo](/demos/Snapshots/Final/logo.png)
 
-Min JO
+![CAD Model](/demos/Snapshots/Final/CAD.gif)
 
-Hyungseok Yoon
-
-Josh Go
-
-Ivan Chowdhury
+**Team**: Min JO, Hyungseok Yoon, Josh Go, Ivan Chowdhury
 
 ## Project Description
 
-This is an Android app that controls an attachable smart lock IoT device remotely through a server hosted on a Raspberry Pi. The goal of this project is to create a more versatile form of lock that can be freely attached onto deadbolt doorlocks and then controlled remotely via a smartphone application.  The lock's design will be open-source and thus modifiable to the owner's preferences, 3D-printable from standard materials, and require low-cost installation without home renovation.
+A new, revolutionary IoT smart lock designed for improved portability and versatility. ItsMe locks can be 3D-printed and assembled at under $60, freely attached onto deadbolt locks with no required home renovation, and can be controlled remotely via Bluetooth with the ItsMe Android app. ItsMe's design is fully open-source, and can be modified to fit locks of any size for individual use. 
 
-Final Presentation may be found [here](https://www.youtube.com/watch?v=xuYFx85O6f8).
+**The 3D-printable CAD models can be found [here](/demos/CAD).**
+
+## Demo
+[![Demo video](https://img.youtube.com/vi/Y3_GFy8Gmhg/maxresdefault.jpg)](https://www.youtube.com/watch?v=Y3_GFy8Gmhg)
+
+**[Rotation Demo](https://www.youtube.com/watch?v=DRbHsR_Iyws)**
+
+**[Final Presentation](https://www.youtube.com/watch?v=xuYFx85O6f8)**
+
+
 ## Features
 - Adjust device to most sizes/shapes of deadbolt locks.
 - Monitor current status of attached lock in real-time from the smartphone app.
@@ -34,4 +39,4 @@ Final Presentation may be found [here](https://www.youtube.com/watch?v=xuYFx85O6
 ## Instructions
 1. Attach your device onto your door, with its grip attached onto your deadbolt lock.
 2. Open the app, press "Turn Bluetooth On" and connect to your lock. 
-3. Download the ItsMe SmartLock Android app (via APK or Google Play Store) and install it.
+3. Download the itsMe SmartLock Android app (via APK or Google Play Store) and install it.
