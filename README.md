@@ -1,6 +1,6 @@
 # itsMe: Attachable Smart Lock 
 
-![Logo](/demos/Snapshots/Final/logo.png)
+![Logo](/demos/Snapshots/Final/logo2.png)
 
 ![CAD Model](/demos/Snapshots/Final/CAD.gif)
 
