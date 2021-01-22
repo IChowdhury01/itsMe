@@ -51,3 +51,12 @@ The above materials are all purchasable on Amazon. These are the recommended bra
 2. Open the itsMe Android app.
 3. Turn on Bluetooth on your phone and connect it to your smart lock.
 4. Your lock's state is now being monitored through the app. Press the "Lock" or "Unlock" app buttons to control the lock's state. Enjoy!
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## Acknowledgements
+
+- **Development team**: Min JO, Hyungseok Yoon, Josh Go, Ivan Chowdhury
+- **Advisors:** Sam Keene, Carl Sable, Shivam Mevawala
