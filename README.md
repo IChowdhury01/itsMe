@@ -26,14 +26,14 @@ itsMe is a smart lock IoT device designed for improved portability and versatili
 
 Click the animation above to find the models.
 
+# Design
+
+![Design Poster](/docs/full-documentation/Final-Poster.png)
+
 ## Materials
 ![](https://i.imgur.com/hORWZto.jpg)
 
 The above materials are all purchasable on Amazon. These are the recommended brands minimizing cost-of-installation; other brands may work, but device stability will not be guaranteed. 
-
-# Design
-
-![Design Poster](/docs/full-documentation/Final-Poster.png)
 
 # Getting Started
 
