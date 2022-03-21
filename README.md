@@ -33,7 +33,7 @@ The above materials are all purchasable on Amazon. These are the recommended bra
 
 # Design
 
-![Design Poster](/docs/full-documentation/Final-Poster.png)]
+![Design Poster](/docs/full-documentation/Final-Poster.png)
 
 # Getting Started
 
@@ -55,7 +55,7 @@ The above materials are all purchasable on Amazon. These are the recommended bra
 3. Turn on Bluetooth on your phone and connect it to your smart lock.
 4. Your lock's state is now being monitored through the app. Press the "Lock" or "Unlock" app buttons to control the lock's state. Enjoy!
 
-[![UI](/demos/Snapshots/Final/UI2.jpg)]
+![UI](/demos/Snapshots/Final/UI2.jpg)
 
 
 # License
